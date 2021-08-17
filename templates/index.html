@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel='icon' href='{% static 'images/favicon.ico'%}' size='16x16'>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Profile Generator</a>
+    </div>
+  </nav>
+
+  </br>
+
+
+
+<div class="card">
+  <div class="card-header">
+    New Profile
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+          {%for i in list_profile2%}
+             {{i}}
+             </br>
+          {%endfor%}
+    </p>
+    <a href="{% url 'profile' %}" method="post" class="btn btn-primary" type = 'submit'>Refresh</a>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
+
