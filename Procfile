@@ -1,1 +1,1 @@
-web: gunicorn profilemakerpro.wsgi
+web: gunicorn contacts.wsgi
